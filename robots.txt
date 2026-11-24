@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://darsynt.com/sitemap.xml
+Sitemap: https://darsynt.github.io/sitemap.xml

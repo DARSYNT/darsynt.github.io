@@ -42,4 +42,8 @@ python -m http.server 8080 --bind 127.0.0.1
 
 ## Публикация
 
-Не выполнена. Выполняется отдельно, только по разрешению владельца (GitHub Pages + домен darsynt.com).
+- Репозиторий: https://github.com/DARSYNT/darsynt.github.io (public, ветка `main`).
+- Сайт: https://darsynt.github.io/ (GitHub Pages, источник: ветка `main`, корень `/`, бесплатно).
+- Обновление сайта: коммит и `git push` в `main`, Pages пересоберётся автоматически.
+- Все пути в проекте относительные, поэтому сайт работает и в корне домена, и в подпапке.
+- Свой домен darsynt.com не подключён, DNS не менялся. При подключении: заменить `https://darsynt.github.io/` на домен в `index.html`, `robots.txt`, `sitemap.xml` и добавить файл `CNAME`.
