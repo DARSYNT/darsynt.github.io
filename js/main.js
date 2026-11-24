@@ -41,8 +41,10 @@
       var rv = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); rv.unobserve(en.target); } });
       }, { threshold: 0.12 });
-      document.querySelectorAll('.reveal').forEach(function (el, i) {
-        el.style.setProperty('--d', (i % 4) * 0.08 + 's');
+      // Задержка считается внутри группы соседних элементов, чтобы блоки появлялись каскадом
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        var sibs = Array.prototype.filter.call(el.parentNode.children, function (n) { return n.classList.contains('reveal'); });
+        el.style.setProperty('--d', Math.min(sibs.indexOf(el), 4) * 0.1 + 's');
         rv.observe(el);
       });
     } else {
@@ -67,7 +69,7 @@
     if (!ctx) return;
     var hero = canvas.parentElement;
     var COLORS = ['0,212,255', '59,130,255', '155,92,255'];
-    var nodes = [], w = 0, h = 0, dpr = 1, raf = 0, visible = true, mouse = { x: -999, y: -999 };
+    var nodes = [], pulses = [], w = 0, h = 0, dpr = 1, raf = 0, visible = true, mouse = { x: -999, y: -999 };
 
     function resize() {
       dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -113,6 +115,25 @@
         }
         ctx.fillStyle = 'rgba(' + a.c + ',.85)';
         ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, 6.2832); ctx.fill();
+      }
+
+      // Световые импульсы, бегущие по связям между узлами
+      if (step && pulses.length < 7 && Math.random() < 0.05) {
+        a = nodes[(Math.random() * nodes.length) | 0];
+        for (j = 0; j < nodes.length; j++) {
+          b = nodes[j]; dx = a.x - b.x; dy = a.y - b.y;
+          if (b !== a && dx * dx + dy * dy < maxD * maxD) { pulses.push({ a: a, b: b, t: 0 }); break; }
+        }
+      }
+      for (i = pulses.length - 1; i >= 0; i--) {
+        var p = pulses[i];
+        if (step) p.t += 0.018;
+        if (p.t >= 1) { pulses.splice(i, 1); continue; }
+        var px = p.a.x + (p.b.x - p.a.x) * p.t, py = p.a.y + (p.b.y - p.a.y) * p.t;
+        var g = ctx.createRadialGradient(px, py, 0, px, py, 9);
+        g.addColorStop(0, 'rgba(' + p.a.c + ',.95)'); g.addColorStop(1, 'rgba(' + p.a.c + ',0)');
+        ctx.fillStyle = g;
+        ctx.beginPath(); ctx.arc(px, py, 9, 0, 6.2832); ctx.fill();
       }
     }
 
