@@ -42,8 +42,11 @@ python -m http.server 8080 --bind 127.0.0.1
 
 ## Публикация
 
+- Основной адрес: https://darsynt.com/ (GitHub Pages, HTTPS включён, бесплатно).
 - Репозиторий: https://github.com/DARSYNT/darsynt.github.io (public, ветка `main`).
-- Сайт: https://darsynt.github.io/ (GitHub Pages, источник: ветка `main`, корень `/`, бесплатно).
+- Домен задаётся файлом `CNAME` (`darsynt.com`). Не удалять и не менять.
+- Запасной адрес https://darsynt.github.io/ перенаправляется на основной.
+- Canonical, Open Graph, JSON-LD, `sitemap.xml`, `robots.txt` указывают на https://darsynt.com/.
 - Обновление сайта: коммит и `git push` в `main`, Pages пересоберётся автоматически.
-- Все пути в проекте относительные, поэтому сайт работает и в корне домена, и в подпапке.
-- Свой домен darsynt.com не подключён, DNS не менялся. При подключении: заменить `https://darsynt.github.io/` на домен в `index.html`, `robots.txt`, `sitemap.xml` и добавить файл `CNAME`.
+- Все пути относительные. DNS настроен вручную на стороне регистратора и из репозитория не меняется.
+- Версия: v1.0.0.
