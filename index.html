@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DARSYNT — Software • Games • Apps</title>
+  <meta name="description" content="DARSYNT is an independent developer brand building software, games and apps. Kazakhstan.">
+  <meta name="theme-color" content="#0B0F1A">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://darsynt.com/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DARSYNT">
+  <meta property="og:title" content="DARSYNT — Software • Games • Apps">
+  <meta property="og:description" content="Independent developer brand building software, games and apps.">
+  <meta property="og:url" content="https://darsynt.com/">
+  <meta property="og:image" content="https://darsynt.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DARSYNT — Software • Games • Apps">
+  <meta name="twitter:description" content="Independent developer brand building software, games and apps.">
+  <meta name="twitter:image" content="https://darsynt.com/assets/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DARSYNT",
+    "url": "https://darsynt.com/",
+    "sameAs": ["https://github.com/DARSYNT", "https://t.me/darsynt_official"],
+    "address": { "@type": "PostalAddress", "addressCountry": "KZ" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a class="wordmark" href="#home" aria-label="DARSYNT">DARSYNT</a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header__tools">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" class="lang__btn" data-set-lang="ru" aria-pressed="false">RU</button>
+          <button type="button" class="lang__btn" data-set-lang="en" aria-pressed="true">EN</button>
+        </div>
+        <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" id="bg" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__in">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Independent developer brand</p>
+        <h1 class="hero__title" id="hero-title">DARSYNT</h1>
+        <p class="hero__tag"><span>Software</span><i aria-hidden="true">•</i><span>Games</span><i aria-hidden="true">•</i><span>Apps</span></p>
+        <p class="hero__lead" data-i18n="hero.lead">We build tools, games and applications — from technical utilities for professionals to interactive simulators.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#projects" data-i18n="hero.cta">View projects</a>
+          <a class="btn btn--ghost" href="https://github.com/DARSYNT" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#projects" aria-label="Scroll" data-i18n-aria="hero.scroll"><span></span></a>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__idx">01</p>
+          <h2 id="projects-title" data-i18n="projects.title">Projects</h2>
+          <p class="section__sub" data-i18n="projects.sub">Current work. Everything here is under active development.</p>
+        </header>
+
+        <ul class="cards">
+          <li class="card reveal">
+            <span class="card__n">01</span>
+            <span class="status" data-i18n="status.dev">In development</span>
+            <h3>LED Power &amp; Signal Designer</h3>
+            <p data-i18n="p1.desc">A program for calculating and designing LED screens: power, signal routing and layout.</p>
+            <span class="card__tag" data-i18n="p1.tag">Software</span>
+          </li>
+          <li class="card reveal">
+            <span class="card__n">02</span>
+            <span class="status" data-i18n="status.dev">In development</span>
+            <h3>NDI Diagnostic</h3>
+            <p data-i18n="p2.desc">A tool for diagnosing network video signals.</p>
+            <span class="card__tag" data-i18n="p2.tag">Developer tool</span>
+          </li>
+          <li class="card reveal">
+            <span class="card__n">03</span>
+            <span class="status" data-i18n="status.dev">In development</span>
+            <h3>Stage Crew Tycoon</h3>
+            <p data-i18n="p3.desc">A simulator of a concert technical production company.</p>
+            <span class="card__tag" data-i18n="p3.tag">Game</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap about">
+        <header class="section__head">
+          <p class="section__idx">02</p>
+          <h2 id="about-title" data-i18n="about.title">About</h2>
+        </header>
+        <div class="about__body">
+          <p class="about__lead reveal" data-i18n="about.lead">DARSYNT is an independent software, games and apps developer based in Kazakhstan.</p>
+          <p class="about__text reveal" data-i18n="about.text">We focus on practical products with clean interfaces and solid engineering — and on the tools that make building them faster.</p>
+          <ul class="tracks">
+            <li class="reveal"><b>Software</b><span data-i18n="about.software">Desktop programs for real professional tasks.</span></li>
+            <li class="reveal"><b>Games</b><span data-i18n="about.games">Simulators and interactive experiences.</span></li>
+            <li class="reveal"><b>Apps</b><span data-i18n="about.apps">Applications for everyday and specialised use.</span></li>
+            <li class="reveal"><b>Developer Tools</b><span data-i18n="about.tools">Utilities for diagnostics and development workflows.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__idx">03</p>
+          <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
+          <p class="section__sub" data-i18n="contact.sub">Find DARSYNT here.</p>
+        </header>
+        <div class="links">
+          <a class="link reveal" href="https://github.com/DARSYNT" target="_blank" rel="noopener noreferrer">
+            <span class="link__k">GitHub</span><span class="link__v">github.com/DARSYNT</span><span class="link__a" aria-hidden="true">↗</span>
+          </a>
+          <a class="link reveal" href="https://t.me/darsynt_official" target="_blank" rel="noopener noreferrer">
+            <span class="link__k">Telegram</span><span class="link__v">t.me/darsynt_official</span><span class="link__a" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <a class="wordmark" href="#home" aria-label="DARSYNT">DARSYNT</a>
+        <p>Software • Games • Apps</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://github.com/DARSYNT" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://t.me/darsynt_official" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </div>
+    </div>
+    <div class="wrap footer__copy">
+      <span>© <span id="year">2026</span> DARSYNT. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    </div>
+  </footer>
+</body>
+</html>
